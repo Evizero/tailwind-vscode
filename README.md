@@ -1,17 +1,20 @@
 # tailwind-vscode
 
+> [!NOTE]
+> This is a fork of with updated vscode variables (last update: 2024-08-29)
+
 Are you authoring VS Code extensions with webviews? Step right up! This is a plugin for Tailwind that exposes VS Code's theme colors as Tailwind colors — with all of the variants (`bg`, `text`, `border`, etc…) Now you can author styles for your extension's webviews with Tailwind and use the active VS Code theme colors.
 
 No, this is not a plugin for VS Code! Your absolutely should check out the [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) plugin, though. Not gonna lie, it's pretty fantastic.
 
 ## How do I use it?
 
-Add via your favorite package manager. 
+Add via your favorite package manager.
 
 ```bash
-$ npm i -D @githubocto/tailwind-vscode
+$ npm i -D @evizero/tailwind-vscode
 $ # or yarn, I ain't gonna judge
-$ yarn add -D @githubocto/tailwind-vscode
+$ yarn add -D @evizero/tailwind-vscode
 ```
 
 Then add the plugin to your `tailwind.config.js`:
@@ -19,7 +22,7 @@ Then add the plugin to your `tailwind.config.js`:
 ```js
 module.exports = {
   /* other config stuff here */
-  plugins: [require('@githubocto/tailwind-vscode')],
+  plugins: [require('@evizero/tailwind-vscode')],
 }
 ```
 
@@ -41,7 +44,7 @@ These are injected by VS Code, and contain the style colors defined by the activ
 
 Only, once you get used to Tailwind-y everything, using those color variables is quite jarring.
 
-This plugin creates a `vscode` Tailwind [color object](https://tailwindcss.com/docs/customizing-colors#color-object-syntax) with definitions for every [VS Code theme color](https://code.visualstudio.com/api/references/theme-color). 
+This plugin creates a `vscode` Tailwind [color object](https://tailwindcss.com/docs/customizing-colors#color-object-syntax) with definitions for every [VS Code theme color](https://code.visualstudio.com/api/references/theme-color).
 
 You could map these variables manually, like so:
 
